@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const taskInput = document.getElementById('taskInput');
     const addTaskBtn = document.getElementById('addTaskBtn');
     const taskList = document.getElementById('taskContainer');
-    const themeToggle = document.getElementById('btnThemeToggle');
 
     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -14,11 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
     
-    themeToggle.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-        console.log(document.documentElement.classList)
-    });
-
     
     addTaskBtn.addEventListener("click", () => {
         const taskText = taskInput.value.trim();
